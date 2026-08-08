@@ -45,25 +45,20 @@ namespace Content.Client.Stylesheets
         // Goobstation - ZH text support
         protected StyleBase(IResourceCache resCache)
         {
-            var notoSans12 = resCache.GetFont
+            var OCR-A-Extended12 = resCache.GetFont
             (
                 new []
                 {
-                    "/Fonts/NotoSans/NotoSans-Regular.ttf",
-                    "/Fonts/NotoSans/NotoSansSC-Regular.ttf",
-                    "/Fonts/NotoSans/NotoSansSymbols-Regular.ttf",
-                    "/Fonts/NotoSans/NotoSansSymbols2-Regular.ttf",
+                    "/Fonts/OCR-A-Extended/OCR-A-Extended-Regular.ttf",
                 },
                 12
             );
-            var notoSans12Italic = resCache.GetFont
+            var OCR-A-Extended12Italic = resCache.GetFont
             (
                 new []
                 {
-                    "/Fonts/NotoSans/NotoSans-Italic.ttf",
-                    "/Fonts/NotoSans/NotoSansSC-Regular.ttf",
-                    "/Fonts/NotoSans/NotoSansSymbols-Regular.ttf",
-                    "/Fonts/NotoSans/NotoSansSymbols2-Regular.ttf",
+                    "/Fonts/OCR-A-Extended/OCR-A-Extended-Regular.ttf"
+
                 },
                 12
             );

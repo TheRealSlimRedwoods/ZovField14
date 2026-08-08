@@ -540,7 +540,7 @@ namespace Content.Client.Stylesheets
             var sliderFillBlue = new StyleBoxTexture(sliderFillBox) { Modulate = Color.Blue };
             var sliderFillWhite = new StyleBoxTexture(sliderFillBox) { Modulate = Color.White };
 
-            var boxFont13 = resCache.NotoStack2ElectricBoogaloo("/Fonts/Boxfont-round/Boxfont Round.ttf", 13); // Goobstation - ZH text support
+            var boxFont13 = resCache.NotoStack2ElectricBoogaloo("/Fonts/OCR-A-Extended/OCR-A-Extended-Regular.ttf", 13); // Goobstation - ZH text support
 
             var insetBack = new StyleBoxTexture
             {
