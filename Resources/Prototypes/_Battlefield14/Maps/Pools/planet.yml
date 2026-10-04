@@ -5,6 +5,11 @@
   - BF14Springfield
 
 - type: gameMapPool
+  id: BF14MapPoolEarthGermany
+  maps:
+  - BF14CedarCreek
+
+- type: gameMapPool
   id: BF14MapPoolEarthRussia
   maps:
   - BF14Customs
@@ -19,3 +24,8 @@
   - BF14ShuddihTown
   - BF14FactoryUnrest
   - BF14Waco
+
+- type: gameMapPool
+  id: BF14MapPoolCommando
+  maps:
+  - BF14Hijacked

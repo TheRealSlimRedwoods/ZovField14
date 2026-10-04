@@ -16,6 +16,7 @@
       - WeaponPistolM9
       - WeaponPistolATGlock17
       - WeaponShotgunUSM590Buckshot
+      - WeaponSubmachinegunATSP9
       - BF14KnifeSwitchblade
     chance: 1
 
@@ -37,10 +38,10 @@
       - WeaponSubmachinegunDEMP5A5
       - WeaponSubmachinegunUSMAC10
       - WeaponSubmachinegunUSMAC10Supp
+      - WeaponSubmachinegunATMP9
       - WeaponRifleUSM16A2
       - WeaponShotgunUSM590Buckshot
       - WeaponShotgunUSM870
-      - WeaponRifleUSM14
       - WeaponSniperUSM40A1
       - BF14KnifeFlipTaticool
     chance: 1
@@ -62,6 +63,7 @@
       - WeaponRifleDEG3A3
       - WeaponRifleDEG36
       - WeaponRifleUSM16A4
+      - WeaponRifleUSM14
       - WeaponShotgunUSM870
       - WeaponSubmachinegunDEMP7
       - WeaponSubmachinegunDEMP5SD6
@@ -85,6 +87,7 @@
       - MagazinePistolM1911
       - MagazinePistolGlock17
       - ShellBoxBF12GaugeBuckshot
+      - MagazineSubmachinegunMP9
       - SmokeGrenadeUSM18
     chance: 1
 
@@ -104,11 +107,13 @@
       - MagazinePistolFiveSeven
       - MagazineBox762x51
       - MagazineBox556x45
+      - MagazineBox9x19
       - ShellBoxBF12GaugeBuckshot
       - MagazineRifleM14
       - MagazineRifleSTANAG
       - MagazineRifleG36
       - MagazineSubmachinegunMP5
+      - MagazineSubmachinegunMP9
       - MagazineSubmachinegunMAC10
       - SmokeGrenadeUSM18
       - DefensiveGrenadeUSM67
@@ -159,6 +164,7 @@
       - WeaponPistolUSM1911
       - WeaponPistolM9
       - WeaponPistolATGlock17
+      - WeaponSubmachinegunUSSP5
       - WeaponShotgunUSM590Buckshot
       - BF14KnifeSwitchblade
     chance: 1
@@ -200,9 +206,11 @@
     prototypes:
       - WeaponRifleUSM16A1
       - WeaponRifleUSM16A2
+      - WeaponRifleUSRPK16
       - WeaponShotgunUSM870
       - WeaponRifleUSM14
       - WeaponSubmachinegunDEMP5SD6
+      - WeaponSubmachinegunDEMP510
       - WeaponSniperUSM40A1
     chance: 1
 
@@ -246,6 +254,7 @@
       - MagazinePistolGlock17
       - MagazineBox762x51
       - MagazineBox556x45
+      - MagazineBox9x19
       - ShellBoxBF12GaugeBuckshot
       - MagazineRifleM14
       - MagazineRifleSTANAG
@@ -523,6 +532,7 @@
       - MagazineBox762x54r
       - ShellBoxBF12GaugeBuckshot
       - MagazineBox762x39
+      - MagazineBox9x18
       - MagazineRifleAKM
       - MagazineRifleVPO215
       - MagazineRifleMagpulMosin
@@ -579,10 +589,11 @@
   - type: RandomSpawner
     offset: 0.3
     prototypes:
-      - ClothingHeadHatHelmetHardhat
-      - ClothingBeltMilitaryWebbingIkea
-      - ClothingOuterArmorPlateCarrierCivilian
-      - ArmorPlateLight
+    - ClothingHeadHatHelmetHardhat
+    - ClothingBeltMilitaryWebbingIkea
+    - ClothingBeltMilitaryWebbingMP40
+    - ClothingOuterArmorPlateCarrierCivilian
+    - ArmorPlateLight
     chance: 1
 
 - type: entity
@@ -597,18 +608,19 @@
   - type: RandomSpawner
     offset: 0.3
     prototypes:
-     - ArmorPlateLight
-     - ClothingOuterArmorSurplusVestEmpty
-     - ClothingOuterArmorBasicPlateCarrierEmpty
-     - ClothingBeltMilitaryWebbingRU
-     - ClothingBeltMilitaryWebbingSmallPouchesOlive
-     - ClothingBeltMilitaryWebbingIkea
-     - ClothingOuterArmorKevlarVest
-     - ClothingOuterArmorSurplusVestUNEmpty
-     - ClothingHeadHatHelmetUN
-     - ClothingHeadHatHelmetSurplus
-     - ClothingBackpackButtpack
-     - ClothingBackpackButtpackSurplus
+    - ArmorPlateLight
+    - ClothingOuterArmorSurplusVestEmpty
+    - ClothingOuterArmorBasicPlateCarrierEmpty
+    - ClothingBeltMilitaryWebbingRU
+    - ClothingBeltMilitaryWebbingSmallPouchesOlive
+    - ClothingBeltMilitaryWebbingIkea
+    - ClothingBeltMilitaryWebbingMP40
+    - ClothingOuterArmorKevlarVest
+    - ClothingOuterArmorSurplusVestUNEmpty
+    - ClothingHeadHatHelmetUN
+    - ClothingHeadHatHelmetSurplus
+    - ClothingBackpackButtpack
+    - ClothingBackpackButtpackSurplus
     chance: 1
 
 - type: entity
@@ -623,19 +635,19 @@
   - type: RandomSpawner
     offset: 0.3
     prototypes:
-     - ClothingOuterArmorSurplusVestUNKevlar
-     - ArmorPlateMedium
-     - ArmorPlateLight
-     - ClothingOuterArmorPlateCarrierBlack
-     - ClothingOuterArmorPlateCarrierTan
-     - ClothingOuterArmorBasicPlateCarrierKevlar
-     - ClothingOuterArmorSurplusVestEmpty
-     - ClothingOuterArmorBasicPlateCarrierKevlar
-     - ClothingBeltMilitaryWebbingRU
-     - ClothingBackpackRucksackBlack
-     - ClothingBackpackRucksackTan
-     - ClothingHeadHatHelmetUN
-     - ClothingHeadHatHelmetSurplus
+    - ClothingOuterArmorSurplusVestUNKevlar
+    - ArmorPlateMedium
+    - ArmorPlateLight
+    - ClothingOuterArmorPlateCarrierBlack
+    - ClothingOuterArmorPlateCarrierTan
+    - ClothingOuterArmorBasicPlateCarrierKevlar
+    - ClothingOuterArmorSurplusVestEmpty
+    - ClothingOuterArmorBasicPlateCarrierKevlar
+    - ClothingBeltMilitaryWebbingRU
+    - ClothingBackpackRucksackBlack
+    - ClothingBackpackRucksackTan
+    - ClothingHeadHatHelmetUN
+    - ClothingHeadHatHelmetSurplus
     chance: 1
 
 - type: entity
@@ -650,32 +662,32 @@
   - type: RandomSpawner
     offset: 0.3
     prototypes:
-      - ClothingUniformJumpsuitPlain
-      - ClothingUniformJumpsuitWorker
-      - ClothingUniformJumpsuitClerk
-      - ClothingUniformJumpsuitDealer
-      - ClothingUniformJumpsuitHunter
-      - ClothingUniformJumpsuitHawaiBlack
-      - ClothingUniformJumpsuitHawaiBlue
-      - ClothingUniformJumpsuitPatrioticUSA1
-      - ClothingUniformJumpsuitGorka
-      - ClothingHeadHatBeanieBlack
-      - ClothingHeadHatPompon
-      - ClothingMaskNeckGaiter
-      - BF14ClothingOuterCoatCivGreen
-      - BF14ClothingOuterCoatCivBlack
-      - BF14ClothingOuterCoatCivRed
-      - BF14ClothingOuterCoatCivUkr
-      - ClothingOuterCoatBomber
-      - ClothingOuterCoatJacketLettermanBrown
-      - ClothingOuterBlackTrenchcoat
-      - ClothingHandsGlovesColorBlack
-      - ClothingHandsGlovesFingerless
-      - ClothingShoesColorBlack
-      - ClothingShoesColorBrown
-      - ClothingShoesBootsJack
-      - ClothingShoesBootsLaceup
-      - ClothingShoesBootsWork
+    - ClothingUniformJumpsuitPlain
+    - ClothingUniformJumpsuitWorker
+    - ClothingUniformJumpsuitClerk
+    - ClothingUniformJumpsuitDealer
+    - ClothingUniformJumpsuitHunter
+    - ClothingUniformJumpsuitHawaiBlack
+    - ClothingUniformJumpsuitHawaiBlue
+    - ClothingUniformJumpsuitPatrioticUSA1
+    - ClothingUniformJumpsuitGorka
+    - ClothingHeadHatBeanieBlack
+    - ClothingHeadHatPompon
+    - ClothingMaskNeckGaiter
+    - BF14ClothingOuterCoatCivGreen
+    - BF14ClothingOuterCoatCivBlack
+    - BF14ClothingOuterCoatCivRed
+    - BF14ClothingOuterCoatCivUkr
+    - ClothingOuterCoatBomber
+    - ClothingOuterCoatJacketLettermanBrown
+    - ClothingOuterBlackTrenchcoat
+    - ClothingHandsGlovesColorBlack
+    - ClothingHandsGlovesFingerless
+    - ClothingShoesColorBlack
+    - ClothingShoesColorBrown
+    - ClothingShoesBootsJack
+    - ClothingShoesBootsLaceup
+    - ClothingShoesBootsWork
     chance: 1
 
 - type: entity
@@ -690,26 +702,27 @@
   - type: RandomSpawner
     offset: 0.3
     prototypes:
-      - ClothingUniformJumpsuitPlain
-      - ClothingUniformJumpsuitWorker
-      - ClothingUniformJumpsuitDealer
-      - ClothingUniformJumpsuitHunter
-      - ClothingUniformJumpsuitPatrioticUSA1
-      - ClothingUniformJumpsuitGorka
-      - ClothingHeadHatBeanieBlack
-      - ClothingMaskNeckGaiter
-      - ClothingBalaclavaMilitary
-      - ClothingBalaclavaMilitarySkull
-      - ClothingOuterArmorPlateCarrierCivilian
-      - ClothingOuterArmorKevlarVest
-      - ClothingHandsGlovesColorBlack
-      - ClothingBackpackButtpack
-      - ClothingBackpackButtpackSurplus
-      - ClothingBeltMilitaryWebbingIkea
-      - ClothingBeltMilitaryWebbingSmallPouchesOlive
-      - ClothingShoesColorBlack
-      - ClothingShoesBootsJack
-      - ClothingShoesBootsWork
+    - ClothingUniformJumpsuitPlain
+    - ClothingUniformJumpsuitWorker
+    - ClothingUniformJumpsuitDealer
+    - ClothingUniformJumpsuitHunter
+    - ClothingUniformJumpsuitPatrioticUSA1
+    - ClothingUniformJumpsuitGorka
+    - ClothingHeadHatBeanieBlack
+    - ClothingMaskNeckGaiter
+    - ClothingBalaclavaMilitary
+    - ClothingBalaclavaMilitarySkull
+    - ClothingOuterArmorPlateCarrierCivilian
+    - ClothingOuterArmorKevlarVest
+    - ClothingHandsGlovesColorBlack
+    - ClothingBackpackButtpack
+    - ClothingBackpackButtpackSurplus
+    - ClothingBeltMilitaryWebbingIkea
+    - ClothingBeltMilitaryWebbingSmallPouchesOlive
+    - ClothingBeltMilitaryWebbingMP40
+    - ClothingShoesColorBlack
+    - ClothingShoesBootsJack
+    - ClothingShoesBootsWork
     chance: 1
 
 - type: entity
@@ -724,14 +737,14 @@
   - type: RandomSpawner
     offset: 0.3
     prototypes:
-      - ClothingUniformJumpsuitWorker
-      - ClothingUniformJumpsuitEngineer
-      - ClothingUniformJumpsuitMechanic
-      - ClothingHeadHatBeanieBlack
-      - ClothingHeadHatHelmetHardhat
-      - ClothingEyesGlassesSafetyGoggles
-      - ClothingOuterWorkJacket
-      - ClothingOuterWorkerHighViz
-      - ClothingHandsGlovesColorBlack
-      - ClothingShoesBootsWork
+    - ClothingUniformJumpsuitWorker
+    - ClothingUniformJumpsuitEngineer
+    - ClothingUniformJumpsuitMechanic
+    - ClothingHeadHatBeanieBlack
+    - ClothingHeadHatHelmetHardhat
+    - ClothingEyesGlassesSafetyGoggles
+    - ClothingOuterWorkJacket
+    - ClothingOuterWorkerHighViz
+    - ClothingHandsGlovesColorBlack
+    - ClothingShoesBootsWork
     chance: 1
