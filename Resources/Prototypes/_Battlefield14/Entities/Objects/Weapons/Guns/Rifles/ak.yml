@@ -130,8 +130,124 @@
     zeroVisible: true
 
 - type: entity
-  name: AKS-74u
+  name: AK-74M UUK
+  parent: WeaponRifleRUAK74M
+  id: WeaponRifleRUAK74MUUK
+  description: Universal Upgrade Kit, a kind of in-between point of the AK-74M and AK-12.
+  components:
+  - type: Sprite
+    sprite: _Battlefield14/Objects/Weapons/Guns/Rifles/AK/iconstates.rsi
+    layers:
+      - state: base
+        map: ["enum.GunVisualLayers.Base"]
+      - state: stock-UUK
+      - state: grip-UUK
+      - state: handguard-UUK
+      - state: barrel-ak74
+      - state: collimator-1p87black
+      - state: foregrip-polymerblack
+      - state: mag-ak74black-0
+        map: ["enum.GunVisualLayers.Mag"]
+  - type: WieldedCrosshair
+    rsi:
+      sprite: _Battlefield14/Interface/MousePointer/optics.rsi
+      state: 1p87
+
+- type: entity
+  name: AKS-74
   parent: WeaponRifleRUAK74
+  id: WeaponRifleRUAKS74
+  description: An AK-74 with a folding stock, for VDV paratroopers in the soviet union.
+  components:
+  - type: Item
+  - type: Sprite
+    sprite: _Battlefield14/Objects/Weapons/Guns/Rifles/AK/iconstates.rsi
+    layers:
+      - state: base
+        map: ["enum.GunVisualLayers.Base"]
+      - state: stock-folding
+      - map: ["stockAttachment"]
+      - state: grip-ak74
+      - state: handguard-ak74
+      - state: barrel-ak74
+      - map: ["barrelAttachment"]
+        offset: 0.6875 , 0.065
+      - state: ironsight-ak74
+      - state: mag-ak74-0
+        map: ["enum.GunVisualLayers.Mag"]
+  - type: ItemSlots
+    slots:
+      gun_magazine:
+        name: Magazine
+        startingItem: MagazineRifleAK74
+        insertSound: /Audio/_Battlefield14/Weapons/Guns/AK_545/uc_ak_magin.ogg
+        ejectSound: /Audio/_Battlefield14/Weapons/Guns/AK_545/uc_ak_magout.ogg
+        priority: 2
+        whitelist:
+          tags:
+            - MagazineRifleAK74
+        whitelistFailPopup: gun-magazine-whitelist-fail
+      gun_chamber:
+        name: Chamber
+        startingItem: BF_CartridgeRifle545x39
+        priority: 1
+        whitelist:
+          tags:
+            - BF_CartridgeRifle545x39
+      attachment_barrel:
+        name: Barrel attachment
+        whitelist:
+          tags:
+            - BF14Bayonet6h4
+      attachment_stock:
+        name: Stock attachment
+        whitelist:
+          tags:
+            - BF14TourniquetEsmarch
+  - type: ContainerContainer
+    containers:
+      gun_magazine: !type:ContainerSlot
+      gun_chamber: !type:ContainerSlot
+      attachment_barrel: !type:ContainerSlot
+      attachment_stock: !type:ContainerSlot
+  - type: ESAttachableGun
+    slots:
+    - name: barrel attachment
+      containerId: attachment_barrel
+      whitelist:
+        tags:
+        - BF14Bayonet6h4
+    - name: stock attachment
+      containerId: attachment_stock
+      whitelist:
+        tags:
+        - BF14TourniquetEsmarch
+  - type: ActivatableUI
+    key: enum.ESAttachableGunUiKey.Key
+    verbOnly: true
+    verbText: es-gun-attachments-verb-text
+  - type: UserInterface
+    interfaces:
+      enum.ESAttachableGunUiKey.Key:
+        type: ESGunAttachmentBui
+  - type: ESItemMapper
+    mappings:
+      barrelAttachment:
+      - containerId: attachment_barrel
+        state: bayonet-6h4
+        whitelist:
+          tags:
+          - BF14Bayonet6h4
+      stockAttachment:
+      - containerId: attachment_stock
+        state: esmarch
+        whitelist:
+          tags:
+          - BF14TourniquetEsmarch
+
+- type: entity
+  name: AKS-74u
+  parent: WeaponRifleRUAKS74
   id: WeaponRifleRUAKS74U
   description: You know when they decided to bring this out? Afghanistan. Rough.
   components:
@@ -147,6 +263,7 @@
       - state: base
         map: ["enum.GunVisualLayers.Base"]
       - state: stock-folding
+      - map: ["stockAttachment"]
       - state: grip-ak74
       - state: handguard-ak74
       - state: barrel-aks74u
@@ -162,6 +279,58 @@
     availableModes:
     - SemiAuto
     - FullAuto
+  - type: ItemSlots
+    slots:
+      gun_magazine:
+        name: Magazine
+        startingItem: MagazineRifleAK74
+        insertSound: /Audio/_Battlefield14/Weapons/Guns/AK_545/uc_ak_magin.ogg
+        ejectSound: /Audio/_Battlefield14/Weapons/Guns/AK_545/uc_ak_magout.ogg
+        priority: 2
+        whitelist:
+          tags:
+            - MagazineRifleAK74
+        whitelistFailPopup: gun-magazine-whitelist-fail
+      gun_chamber:
+        name: Chamber
+        startingItem: BF_CartridgeRifle545x39
+        priority: 1
+        whitelist:
+          tags:
+            - BF_CartridgeRifle545x39
+      attachment_stock:
+        name: Stock attachment
+        whitelist:
+          tags:
+            - BF14TourniquetEsmarch
+  - type: ContainerContainer
+    containers:
+      gun_magazine: !type:ContainerSlot
+      gun_chamber: !type:ContainerSlot
+      attachment_stock: !type:ContainerSlot
+  - type: ESAttachableGun
+    slots:
+    - name: stock attachment
+      containerId: attachment_stock
+      whitelist:
+        tags:
+        - BF14TourniquetEsmarch
+  - type: ActivatableUI
+    key: enum.ESAttachableGunUiKey.Key
+    verbOnly: true
+    verbText: es-gun-attachments-verb-text
+  - type: UserInterface
+    interfaces:
+      enum.ESAttachableGunUiKey.Key:
+        type: ESGunAttachmentBui
+  - type: ESItemMapper
+    mappings:
+      stockAttachment:
+      - containerId: attachment_stock
+        state: esmarch
+        whitelist:
+          tags:
+          - BF14TourniquetEsmarch
 
 - type: entity
   name: AKS-74UB
@@ -175,6 +344,7 @@
       - state: base
         map: ["enum.GunVisualLayers.Base"]
       - state: stock-folding
+      - map: ["stockAttachment"]
       - state: grip-ak74
       - state: handguard-ak74
       - state: barrel-aks74u
@@ -466,7 +636,7 @@
     minAngle: 31
     maxAngle: 45
     angleIncrease: 1.5
-#    angleDecay: 16
+    angleDecay: 16
     availableModes:
     - SemiAuto
     - FullAuto
@@ -506,6 +676,58 @@
         requireDetailRange: true
 
 - type: entity
+  name: MPi-KM
+  parent: WeaponRifleRUAKMS
+  id: WeaponRifleDEMPIKM
+  description: A locally produced east German AKM.
+  components:
+  - type: Item
+    sprite: _Battlefield14/Objects/Weapons/Guns/Rifles/AK/MPiKM.rsi
+  - type: Icon
+    sprite: _Battlefield14/Objects/Weapons/Guns/Rifles/AK/iconstates.rsi
+    state: icon-akms
+  - type: Sprite
+    sprite: _Battlefield14/Objects/Weapons/Guns/Rifles/AK/iconstates.rsi
+    layers:
+      - state: base
+        map: ["enum.GunVisualLayers.Base"]
+      - state: stock-mpikm
+      - state: grip-ak74
+      - state: handguard-mpi
+      - state: barrel-akm
+      - state: ironsight-ak74
+      - state: mag-akm-0
+        map: ["enum.GunVisualLayers.Mag"]
+  - type: Clothing
+    sprite: _Battlefield14/Objects/Weapons/Guns/Rifles/AK/MPiKM.rsi
+
+- type: entity
+  name: MPi-KMS
+  parent: WeaponRifleRUAKMS
+  id: WeaponRifleDEMPIKMS
+  description: A locally produced east German AKMS with a slightly different stock.
+  components:
+  - type: Item
+    sprite: _Battlefield14/Objects/Weapons/Guns/Rifles/AK/MPiKMS.rsi
+  - type: Icon
+    sprite: _Battlefield14/Objects/Weapons/Guns/Rifles/AK/iconstates.rsi
+    state: icon-akms
+  - type: Sprite
+    sprite: _Battlefield14/Objects/Weapons/Guns/Rifles/AK/iconstates.rsi
+    layers:
+      - state: base
+        map: ["enum.GunVisualLayers.Base"]
+      - state: stock-mpikms
+      - state: grip-ak74
+      - state: handguard-mpi
+      - state: barrel-akm
+      - state: ironsight-ak74
+      - state: mag-akm-0
+        map: ["enum.GunVisualLayers.Mag"]
+  - type: Clothing
+    sprite: _Battlefield14/Objects/Weapons/Guns/Rifles/AK/MPiKMS.rsi
+
+- type: entity
   name: AK-103
   parent: WeaponRifleRUAKMS
   id: WeaponRifleRUAK103
@@ -525,6 +747,8 @@
       - state: grip-ak74black
       - state: handguard-ak74black
       - state: barrel-ak74
+      - map: ["barrelAttachment"]
+        offset: 0.8, 0.1
       - state: ironsight-ak74
       - state: mag-ak103-0
         map: ["enum.GunVisualLayers.Mag"]
@@ -549,8 +773,51 @@
         whitelist:
           tags:
             - BF_CartridgeRifle762x39
+      attachment_barrel:
+        insertSound: /Audio/Items/screwdriver.ogg
+        ejectSound: /Audio/Items/screwdriver.ogg
+        priority: 0
+        whitelist:
+          tags:
+          - BF14Bayonet6h3
   - type: MagazineVisuals
     magState: mag-ak103
+  - type: ContainerContainer
+    containers:
+      gun_magazine: !type:ContainerSlot
+      gun_chamber: !type:ContainerSlot
+      attachment_barrel: !type:ContainerSlot
+  - type: ESAttachableGun
+    slots:
+    - name: es-gun-attachments-slot-name-barrel
+      containerId: attachment_barrel
+      whitelist:
+        tags:
+        - BF14Bayonet6h3
+  - type: ActivatableUI
+    key: enum.ESAttachableGunUiKey.Key
+    verbOnly: true
+    verbText: es-gun-attachments-verb-text
+  - type: UserInterface
+    interfaces:
+      enum.ESAttachableGunUiKey.Key:
+        type: ESGunAttachmentBui
+  - type: ESItemMapper
+    mappings:
+      barrelAttachment:
+      - containerId: attachment_barrel
+        state: bayonet-6h3
+        whitelist:
+          tags:
+          - BF14Bayonet6h3
+  - type: ExtendDescription
+    descriptionList:
+      - description: Takes AKM pattern magazines.
+        color: "#4f94ad"
+        requireDetailRange: true
+      - description: Takes 6h3 pattern bayonets.
+        color: "#4f94ad"
+        requireDetailRange: true
 
 - type: entity
   name: AK-203
@@ -660,9 +927,9 @@
   description: A de-militarized AKM made for the civilian market.
   components:
   - type: Item
-    sprite: _Battlefield14/Objects/Weapons/Guns/Rifles/VPO136.rsi
+    sprite: _Battlefield14/Objects/Weapons/Guns/Rifles/AK/MPiKM.rsi # fuck it. change to AKM later
   - type: Icon
-    sprite: _Battlefield14/Objects/Weapons/Guns/Rifles/VPO136.rsi
+    sprite: _Battlefield14/Objects/Weapons/Guns/Rifles/AK/MPiKM.rsi
     state: icon
   - type: Sprite
     sprite: _Battlefield14/Objects/Weapons/Guns/Rifles/AK/iconstates.rsi
@@ -677,7 +944,7 @@
       - state: mag-akm-0
         map: ["enum.GunVisualLayers.Mag"]
   - type: Clothing
-    sprite: _Battlefield14/Objects/Weapons/Guns/Rifles/VPO136.rsi
+    sprite: _Battlefield14/Objects/Weapons/Guns/Rifles/AK/MPiKM.rsi
   - type: GunWieldBonus
     minAngle: -29
     maxAngle: -27
@@ -713,7 +980,7 @@
     layers:
       - state: base
         map: ["enum.GunVisualLayers.Base"]
-      - state: mag-ak74black-0
+      - state: mag-0
         map: ["enum.GunVisualLayers.Mag"]
   - type: Clothing
     sprite: _Battlefield14/Objects/Weapons/Guns/Rifles/AK/AN94.rsi

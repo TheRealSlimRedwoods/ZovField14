@@ -452,7 +452,7 @@
   - type: ContainerFill
     containers:
       item:
-      - WeaponPistolM9ITSupp
+      - WeaponPistolITM9Supp
   - type: StorageFill
     contents:
       - id: Handcuffs
@@ -470,7 +470,7 @@
   - type: ContainerFill
     containers:
       item:
-      - WeaponPistolM9ITSupp
+      - WeaponPistolITM9Supp
   - type: StorageFill
     contents:
       - id: Handcuffs
@@ -565,9 +565,9 @@
   - type: StorageFill
     contents:
       - id: HandheldHealthAnalyzerUnpowered
-      - id: AU14HemostaticGauzePacket
-      - id: Brutepack
-      - id: Ointment
+      - id: BF14GauzePacket
+      - id: BF14DressingPacket
+      - id: BF14Ointment
       - id: MedicationBoxPillsBicaridine
       - id: MedicationBoxPillsKelotane
       - id: MedicationBoxPillsTricordrazine

@@ -37,10 +37,9 @@
       - WeaponRifleUSAR15
       - WeaponSubmachinegunDEMP5A5
       - WeaponSubmachinegunUSMAC10
-      - WeaponSubmachinegunUSMAC10Supp
       - WeaponSubmachinegunATMP9
       - WeaponRifleUSM16A2
-      - WeaponShotgunUSM590Buckshot
+      - WeaponShotgunUS1887Short
       - WeaponShotgunUSM870
       - WeaponSniperUSM40A1
       - BF14KnifeFlipTaticool
@@ -60,11 +59,13 @@
     prototypes:
       - WeaponRifleBESCARH
       - WeaponRifleBESCARL
+      - WeaponRifleBEFAL
+      - WeaponRifleBEFALPara
       - WeaponRifleDEG3A3
       - WeaponRifleDEG36
       - WeaponRifleUSM16A4
-      - WeaponRifleUSM14
       - WeaponShotgunUSM870
+      - WeaponSubmachinegunUSMAC10Supp
       - WeaponSubmachinegunDEMP7
       - WeaponSubmachinegunDEMP5SD6
     chance: 1
@@ -86,8 +87,8 @@
       - MagazinePistolM9
       - MagazinePistolM1911
       - MagazinePistolGlock17
-      - ShellBoxBF12GaugeBuckshot
       - MagazineSubmachinegunMP9
+      - ShellBoxBF12GaugeBreaching
       - SmokeGrenadeUSM18
     chance: 1
 
@@ -109,7 +110,7 @@
       - MagazineBox556x45
       - MagazineBox9x19
       - ShellBoxBF12GaugeBuckshot
-      - MagazineRifleM14
+      - MagazineRifleFAL
       - MagazineRifleSTANAG
       - MagazineRifleG36
       - MagazineSubmachinegunMP5
@@ -139,6 +140,8 @@
       - MagazineRifleG36
       - MagazineRifleG3
       - MagazineRifleSCARH
+      - MagazineRifleFAL
+      - MagazineRifleFAL30
       - MagazineSubmachinegunMP5
       - MagazineSubmachinegunMAC10
       - FlashbangGrenadeUSM84
@@ -166,6 +169,7 @@
       - WeaponPistolATGlock17
       - WeaponSubmachinegunUSSP5
       - WeaponShotgunUSM590Buckshot
+      - WeaponPistolRevolverBRJudge
       - BF14KnifeSwitchblade
     chance: 1
 
@@ -207,7 +211,7 @@
       - WeaponRifleUSM16A1
       - WeaponRifleUSM16A2
       - WeaponRifleUSRPK16
-      - WeaponShotgunUSM870
+      - WeaponShotgunUSM1014
       - WeaponRifleUSM14
       - WeaponSubmachinegunDEMP5SD6
       - WeaponSubmachinegunDEMP510
@@ -235,6 +239,7 @@
       - MagazineSubmachinegunMP5
       - MagazineRifleSTANAGShort
       - ShellBoxBF12GaugeBuckshot
+      - ShellBox410Bore
       - SmokeGrenadeUSM18
     chance: 1
 

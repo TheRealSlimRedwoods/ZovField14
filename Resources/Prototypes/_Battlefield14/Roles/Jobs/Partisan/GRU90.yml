@@ -46,14 +46,15 @@
     ears: ClothingHeadsetAltRU
     jumpsuit: ClothingUniformJumpsuitRUGorka
     outerClothing: ClothingOuterArmorKevlarVest
+    suitstorage2: BF14ClothingArmbandSheathKnife6h4
     belt: ClothingBeltMilitaryWebbingRU
-    shoes: ClothingShoesBootsJackFilledRU
+    shoes: ClothingShoesBootsJack
     rightarmband: FlashlightMilitaryAlt
-    pocket1: PouchFirstAidFilled
+    pocket1: PouchFirstAidFilledPACT
     pocket2: PouchGrenades
   storage:
     belt:
-#    - ClothingMaskGasM40
+    - ClothingMaskGasGP7VM
     - DrinkMREFlask
-    - Tourniquet
+    - BF14TourniquetEsmarch
     - Zipties
